@@ -1,0 +1,40 @@
+use dulich_tanky;
+
+CREATE TABLE dangkytour(
+matour text PRIMARY KEY,
+tentour text,
+khachhang map<text, text>,
+ngaydi text
+);
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT1','Du Lich Sinh Thai', {'ten': 'Nguyen Anh Dac', 'diachi': 'Quan 9'}, '6/6/2022');
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT2','Du Lich Tham Hiem', {'ten': 'Lai Huu Trac', 'diachi': 'Binh Duong'}, '6/7/2022');
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT3','Du Lich Bien', {'ten': 'Nguyen Thanh Tan Ky', 'diachi': 'Thu Duc'}, '6/8/2022');
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT4','Di Tich Lich Su', {'ten': 'Dao Thi Cam Tien', 'diachi': 'Quan 10'}, '6/9/2022');
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT5','Ba Na Hill', {'ten': 'Tran Thanh Quang', 'diachi': 'Quan Go Vap'}, '6/2/2022');
+
+INSERT INTO dangkytour(matour, tentour, khachhang, ngaydi) 
+VALUES('MT6','Du Lich Hang Dong', {'ten': 'Bui Quoc Kiet', 'diachi': 'Quan Binh Thanh'}, '6/6/2022');
+
+select * from dangkytour;
+
+UPDATE dangkytour
+SET khachhang = khachhang+{'diachi':'Quan 10'}
+WHERE matour = 'MT1';
+
+UPDATE dangkytour
+SET khachhang = khachhang+{'ten': 'Nguyen Van B', 'diachi':'Quan 7'}
+WHERE matour = 'MT6';
+
+select * from dangkytour;
+
+
