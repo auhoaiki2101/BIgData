@@ -1,0 +1,33 @@
+
+use anhdac;
+
+CREATE TABLE student(
+mssv text PRIMARY KEY,
+name text,
+home_town text,
+age int
+);
+
+INSERT INTO student(mssv, name, home_town, age) 
+VALUES('19133020','Anh Dac', 'Dak Lak', 20);
+
+INSERT INTO student(mssv, name, home_town, age)
+VALUES('19133031','Tan Ky', 'Quang Binh', 22);
+
+INSERT INTO student(mssv, name, home_town, age)
+VALUES('19133056','Huu Trac', 'Quang Nam', 23);
+
+INSERT INTO student(mssv, name, home_town, age) 
+VALUES('19133047','Thanh Quang', 'Phu Yen', 21);
+
+INSERT INTO student(mssv, name, home_town, age)
+VALUES('19133055','Quoc Kiet', 'Binh Dinh', 23);
+
+INSERT INTO student(mssv, name, home_town, age)
+VALUES('19133039','Duc Dat', 'TP.HCM', 24);
+
+select * from student;
+
+select * from student WHERE age >21 ALLOW FILTERING;
+
+
